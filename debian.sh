@@ -40,5 +40,6 @@ apt-get update >/dev/null
 # Install Puppet
 echo "Installing Puppet..."
 DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" install puppet-agent >/dev/null
+echo "export PATH=/opt/puppetlabs/bin:\$PATH" >> /root/.bashrc
 
 echo "Puppet installed!"
